@@ -1,0 +1,114 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background-image: linear-gradient(45deg, #2c128994, #750e0eda);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-section {
+    box-shadow: 2px 2px 20px 10px #22171fd9;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.687);
+    background-color: rgba(58, 8, 88, 0.271);
+    border-radius: 20px;
+    padding: 20px;
+    animation: fade 0.5s;
+
+    .title {
+        font-size: 30px;
+        text-align: center;
+        /* margin: 10px 0; */
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        label {
+            display: block;
+        }
+
+        input, textarea{
+            background-color: rgba(105, 91, 101, 0.242);
+            border: 2px solid rgba(255, 255, 255, 0.687);
+            padding: 10px;
+            margin: 10px 0;
+            width: 300px;
+            border-radius: 20px;
+            color: white;
+            font-size: 15px;
+
+            &::placeholder {
+                color: white;
+            }
+
+            &::-ms-reveal {
+                filter: invert(100%);
+            }
+        }
+
+        #des {
+            text-align: start;
+            overflow: auto;
+            overflow-x: hidden;
+            border-radius: 10px;
+        }
+
+        #des::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        #des::-webkit-scrollbar-track {
+            background: rgba(105, 91, 101, 0.242);
+            border-radius: 20px;
+        }
+
+        #des::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #4687ff, #ee345f);
+            border-radius: 50px;
+        }
+
+        input.invalid {
+            border: 1px solid red;
+        }
+
+        .button {
+            font-weight: 500;
+            max-width: max-content;
+            font-size: 20px;
+            padding: 8px 80px;
+            border-radius: 20px;
+            border: 2px solid hsl(287, 91%, 18%);
+            background-color: hsl(288, 53%, 65%);
+            color: rgb(255, 255, 255);
+            transition: all 0.18s;
+        }
+        
+        .button:hover {
+            border: 2px solid hsl(287, 87%, 67%);
+            background-color: hsl(303, 22%, 20%);
+            cursor: pointer;
+
+        }
+    }
+
+    p {
+        font-size: 12px;
+    }
+}

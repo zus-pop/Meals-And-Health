@@ -1,0 +1,224 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(53, 53, 53);
+}
+
+.cart-container {
+    color: white;
+    position: relative;
+    margin: 0 80px;
+    top: 150px;
+    bottom: 100px;
+}
+
+.cart-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.cart-row.title {
+    background-color: black;
+    padding: 10px 0;
+}
+
+.cart-row.meal {
+    padding: 20px 0;
+    border-bottom: 1px solid white;
+    font-size: 1.5vw;
+
+    .meal {
+        display: flex;
+        justify-content: space-evenly;
+
+        .meal-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+        }
+
+        .meal-content {
+            .meal-name {
+                color: white;
+                text-decoration: none;
+            }
+
+            .meal-description {
+                max-width: 300px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    .quantity-changer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .quantity-value {
+            font-size: 20px;
+            height: 30px;
+            width: 80px;
+            text-align: center;
+            box-sizing: border-box;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .btn {
+            border-radius: 8px;
+            height: 30px;
+            width: 50px;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background-color: aliceblue;
+            color: black;
+            cursor: pointer;
+        }
+    }
+
+    .cart-action .remove {
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid black;
+        font-size: .8em;
+        transition: all 0.2s;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid white;
+            background-color: black;
+            color: white;
+        }
+    }
+}
+
+.meal {
+    flex: 1 1 40%;
+}
+
+.unit-price {
+    flex: 1 1 10%;
+}
+
+.quantity {
+    flex: 1 1 30%;
+}
+
+.total-price {
+    flex: 1 1 10%;
+}
+
+.cart-action {
+    flex: 1 1 10%;
+}
+
+.cart-checkout {
+    margin: 20px 0;
+    position: sticky;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.468);
+    backdrop-filter: blur(20px);
+    border-radius: 10px 10px 0 0;
+    max-width: inherit;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.total-section {
+    display: flex;
+    font-size: 30px;
+    gap: 10px;
+}
+
+.checkout-btn {
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    padding: 10px 80px;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.2s;
+    border: 1px solid black;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(34, 34, 34);
+        color: white;
+        border: 1px solid white;
+    }
+}
+
+#check-out-dialog {
+    height: 300px;
+    width: 800px;
+    border-radius: 10px;
+}
+
+#check-out-dialog::backdrop {
+    background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.272), rgba(0, 0, 255, 0.453));
+}
+
+#check-out-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: inherit;
+}
+
+.input-section,
+.input-section.cart {
+    padding: 10px 0;
+    width: 400px;
+    font-size: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#street {
+    width: 100%;
+}
+
+.address-select {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.check-out-action {
+    display: flex;
+    justify-content: space-around;
+}
+
+.dialog-btn {
+    background-color: white;
+    font-size: 20px;
+    padding: 10px 80px;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.2s;
+    border: 1px solid black;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(34, 34, 34);
+        color: white;
+        border: 1px solid white;
+    }
+}

@@ -1,0 +1,90 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('../images/order-detail.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    backdrop-filter: blur(18px);
+}
+
+.order-detail-container {
+    margin: 100px 100px;
+    color: white;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(232, 250, 255, 0.756);
+    border-radius: 10px;
+    margin: 50px 0;
+    background-color: rgba(75, 120, 133, 0.352);
+    backdrop-filter: blur(20px);
+}
+
+.row {
+    gap: 20px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.2s;
+    border-bottom: 1px solid rgba(232, 250, 255, 0.756);
+
+    &:last-child {
+        border: none;
+    }
+
+    &:hover {
+        background-color: rgba(61, 109, 122, 0.352);
+    }
+}
+
+.col {
+    text-align: center;
+    flex: 1;
+    word-break: break-all;
+    margin: 10px 0;
+}
+
+.title-row>.col {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.content-row>.col {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.img-col {
+    flex: 1.5;
+}
+
+.img-col.content {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    border: 1px solid rgba(232, 250, 255, 0.756);
+}
+
+.meal-name-col {
+    flex: 2;
+}
+
+.detail-title,
+.empty-msg {
+    text-align: center;
+    font-size: 30px;
+}

@@ -1,0 +1,160 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        linear-gradient(90deg, #457fb2, #2b8b90);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.list-container {
+    margin: 100px 50px;
+}
+
+.list-title {
+    color: white;
+    font-size: 80px;
+    -webkit-text-stroke: 1px #035dab9a;
+    font-weight: 1000;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.table-container {
+    backdrop-filter: blur(20px);
+    background: #3073766d;
+    text-align: center;
+    border: 2px solid #4facfe;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px;
+    color: white;
+    box-shadow: 2px 2px 20px 10px #1d2f3f;
+    transition: all 0.2s;
+}
+
+.table-container:hover {
+    background: #8cc9ff30;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+.title-row>.col {
+    font-size: 20px;
+}
+
+.content-title>.col {
+    font-size: 15px;
+}
+
+.col {
+    text-align: center;
+    flex: 1;
+    word-break: break-all;
+}
+
+.img-col>img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    border: 2px solid #6ebcff;
+}
+
+.name-col {
+    font-size: 20px;
+}
+
+.des-col {
+    flex: 2;
+}
+
+.act-col {
+    flex: .5;
+}
+
+.action-btn {
+    text-decoration: none;
+    color: #083a67;
+    font-weight: 600;
+    border: 2px solid #309eff;
+    padding: 10px 20px;
+    border-radius: 19px;
+    background-color: #ecf6ff;
+    transition: all 0.2s;
+}
+
+.act-col.content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.action-btn:hover {
+    background-color: #083a67;
+    color: #ecf6ff;
+}
+
+.add-more-btn {
+    color: white;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    text-decoration: none;
+    
+    .btn-content > * {
+        margin: 0 13px;
+    }
+
+    .btn-content {
+        border: 2px solid #6ebcff;
+        background-color: #025869;
+        font-size: 28px;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+        position: relative;
+        
+        border-radius: 50px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        direction: rtl;
+        transition: all 0.4s ease-out;
+
+        .plus {
+            position: absolute;
+            right: 0;
+            top: 24%;
+            transition: all 0.3s ease-out;
+        }
+        
+        .more-text {
+            position: absolute;
+            right: 60px;
+        }
+
+        &:hover {
+            width: 380px;
+            border-radius: 18px;
+            .plus {
+                rotate: 180deg;
+            }
+        }
+    }
+}
+
+.empty-msg {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}

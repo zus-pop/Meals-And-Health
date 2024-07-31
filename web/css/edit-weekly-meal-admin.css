@@ -1,0 +1,89 @@
+.action-crud {
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    
+    .save,
+    .update {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        flex: 1 1;
+        font-size: 30px;
+        border: 1px solid white;
+        &:hover {
+            background-color: rgba(34, 34, 34, 0.8);
+            cursor: pointer;
+        }
+    }
+
+    .cancel {
+        text-decoration: none;
+        border: 1px solid white;
+        height: inherit;
+        flex: 1 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 30px;
+        transition: all 0.2s;
+
+        &:hover {
+            background-color: rgba(34, 34, 34, 0.8);
+        }
+    }
+}
+
+.input-meal {
+    width: 80%;
+    padding: 8px 0;
+    font-size: 25px;
+    color: white;
+    border-radius: 8px;
+    
+    > option {
+        background-color: rgba(14, 14, 14, 0.8);
+    }
+
+    background-color: rgba(14, 14, 14, 0.841);
+}
+
+.admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.add-meal {
+    font-size: 25px;
+    transform: scale(0.9);
+    transition: all 0.5s;
+    &:hover {
+        transform: scale(1);
+        cursor: pointer;
+    }
+}
+
+.list {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.remove {
+    font-size: 20px;
+    transform: scale(0.9);
+    transition: all 0.5s;
+    &:hover {
+        transform: scale(1);
+        cursor: pointer;
+    }
+}
+
+.remove.disabled {
+    display: none;
+}

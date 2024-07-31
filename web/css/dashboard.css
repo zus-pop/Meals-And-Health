@@ -1,0 +1,52 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../images/order-detail.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    backdrop-filter: blur(20px);
+}
+
+.manage-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manage-list {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    background: rgba(75, 75, 52, 0.393);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+.manage {
+    display: block;
+    border: 1px solid white;
+    padding: 10px 200px;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: rgba(148, 148, 98, 0.393);
+    }
+}

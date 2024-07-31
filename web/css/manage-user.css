@@ -1,0 +1,233 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('../images/order-detail.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    backdrop-filter: blur(18px);
+}
+
+.manage-user-container {
+    margin: 100px 100px;
+    color: white;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(232, 250, 255, 0.756);
+    border-radius: 10px;
+    margin: 50px 0;
+    background-color: rgba(75, 120, 133, 0.352);
+    backdrop-filter: blur(20px);
+}
+
+.title-row>.col {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.title-row>.col:last-child {
+    border: none;
+}
+
+.content-row>.col {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.row {
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.2s;
+    border-bottom: 1px solid rgba(232, 250, 255, 0.756);
+
+    &:last-child {
+        border: none;
+    }
+
+    &:hover {
+        background-color: rgba(61, 109, 122, 0.352);
+    }
+}
+
+.col {
+    text-align: center;
+    flex: 1;
+    word-break: break-all;
+}
+
+.id {
+    flex: .8;
+}
+
+.username {
+    flex: 1.5;
+}
+
+.email {
+    flex: 2;
+}
+
+.content-row > .col.action {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.remove-btn {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgba(48, 124, 116, 0.53);
+    border: 1px solid rgba(232, 250, 255, 0.756);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        border: 1px solid rgb(24, 65, 77);
+        background-color: rgba(88, 216, 203, 0.53);
+        color: rgb(15, 55, 66);
+    }
+}
+
+.remove-btn:disabled {
+    background-color: rgba(75, 120, 133, 0.352);
+    border-color: rgba(232, 250, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.empty-msg {
+    text-align: center;
+    font-size: 50px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    >input {
+        background-color: rgba(75, 120, 133, 0.352);
+        color: white;
+        padding: 10px 20px 9px 15px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border: 1px solid white;
+        width: 300px;
+        font-size: 15px;
+        transition: all 0.2s ease;
+
+        &::placeholder {
+            color: white;
+        }
+
+        &[type="search"]::-webkit-search-cancel-button {
+            appearance: none;
+        }
+
+        &:focus {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    button {
+        background-color: rgba(75, 120, 133, 0.352);
+        color: white;
+        border: 1px solid white;
+        padding: 11px 20px 11px 15px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transition: all 0.2s ease;
+
+        i {
+            font-size: 15px;
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+    }
+}
+
+.search-input {
+    background-color: rgba(75, 120, 133, 0.352);
+    border: 1px solid rgba(232, 250, 255, 0.756);
+    color: white;
+    width: 400px;
+
+    &::placeholder {
+        color: white;
+    }
+
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.bin-btn {
+    color: white;
+    position: sticky;
+    bottom: 30px;
+    left: 1%;
+    text-decoration: none;
+    display: inline-block;
+
+    .btn-content > * {
+        margin: 0 13px;
+    }
+
+    .btn-content {
+        background-color: rgba(75, 120, 133, 0.352);
+        font-size: 28px;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+        position: relative;
+        
+        border: 2px solid rgba(232, 250, 255, 0.756);
+        border-radius: 50px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        direction: ltr;
+        transition: all 0.4s ease-out;
+
+        .trash,
+        .arrow-left{
+            position: absolute;
+            left: 0;
+            top: 24%;
+            transition: all 0.3s ease-out;
+        }
+        
+        .more-text {
+            position: absolute;
+            left: 40px;
+        }
+
+        &:hover {
+            width: var(--expand);
+            border-radius: 18px;
+        }
+    }
+}

@@ -1,0 +1,181 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../images/signin-signup-page-large.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 90vh;
+}
+
+.container {
+    display: flex;
+    height: 98vh;
+    align-items: center;
+    gap: 10px;
+}
+
+.section {
+    box-shadow: 2px 2px 20px 10px #22171fd9;
+    position: relative;
+    left: 200px;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.687);
+    display: none;
+    background-color: rgba(29, 1, 20, 0.253);
+    border-radius: 20px;
+    width: 450px;
+    animation: fade 0.5s;
+
+    .title {
+        font-size: 40px;
+        margin-bottom: -5px;
+    }
+
+    .form {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        input {
+            background-color: rgba(105, 91, 101, 0.242);
+            border: 2px solid rgba(255, 255, 255, 0.687);
+            padding: 10px;
+            margin: 10px 0;
+            width: 250px;
+            border-radius: 20px;
+            color: white;
+
+            &::placeholder {
+                color: white;
+            }
+
+            &::-ms-reveal {
+                filter: invert(100%);
+            }
+        }
+
+        input.invalid {
+            border: 1px solid red;
+        }
+
+        .button {
+            max-width: max-content;
+            font-size: 20px;
+            padding: 8px 80px;
+            border-radius: 20px;
+            border: none;
+            color: white;
+            background-color: hsl(304, 13%, 45%);
+            transition: all 0.18s;
+        }
+        
+        .button:hover {
+            background-color: hsl(303, 22%, 20%);
+            cursor: pointer;
+        }
+        
+        .button:disabled {
+            background-color: hsl(302, 29%, 20%);
+            color: rgb(173, 173, 173);
+            cursor: default;
+        }
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+
+.section.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    animation: appear 0.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#to-register {
+    color: rgb(10, 218, 255);
+
+    &:hover {
+        cursor: pointer;
+        color: rgb(68, 227, 255);
+    }
+}
+
+#to-login {
+    color: rgb(10, 218, 255);
+
+    &:hover {
+        cursor: pointer;
+        color: rgb(68, 227, 255);
+    }
+}
+
+
+.login {
+    height: 400px;
+}
+
+.register {
+    height: 600px;
+
+    .email-field {
+
+        #email:invalid {
+            border: 1px solid red;
+        }
+
+        #email:invalid~.error {
+            display: block;
+            color: red;
+        }
+    }
+}
+
+.error {
+    display: none;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.created {
+    color: rgb(32, 255, 32);
+}
+
+.invalid {
+    color: red;
+}
+
+.error.password-not-match {
+    display: block;
+    color: red;
+}

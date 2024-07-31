@@ -1,0 +1,19 @@
+.action {
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    a {
+        text-decoration: none;
+        border: 1px solid white;
+        height: inherit;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 30px;
+        transition: all 0.2s;
+        &:hover {
+            background-color: rgba(34, 34, 34, 0.8);            
+        }
+    }
+}

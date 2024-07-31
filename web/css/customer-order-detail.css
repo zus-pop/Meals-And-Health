@@ -1,0 +1,226 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('../images/order-detail.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    backdrop-filter: blur(18px);
+}
+
+.order-detail-container {
+    box-sizing: border-box;
+    margin: 100px 160px;
+    padding: 0 50px;
+    border: 1px solid rgba(247, 255, 194, 0.289);
+    border-radius: 10px;
+    background-color: rgba(183, 186, 106, 0.12);
+    backdrop-filter: blur(20px);
+    color: rgb(255, 255, 246);
+}
+
+.order-tracking {
+    text-align: center;
+    .order-id {
+        font-size: 2vw;
+        margin: 10px;
+    }
+
+    .order-items {
+        font-size: 1.8vw;
+        margin: 10px;
+    }
+
+    .order-progress {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 10px;
+
+        .order-status {
+            font-size: 1.4vw;
+        }
+
+        .progress-bar {
+            width: 250px;
+            height: 25px;
+            border-radius: 50px;
+            background-color: rgb(66, 66, 66);
+            overflow: hidden;
+            .bar-load {
+                position: relative;
+                height: inherit;
+                border-radius: 50px;
+                width: 0;
+                background: linear-gradient(45deg, rgb(79, 241, 103), rgb(232, 235, 84));
+                transition: all 1s;
+                
+                .package {
+                    position: absolute;
+                    color: rgb(29, 29, 29);
+                    top: 5px;
+                    right: 8px;
+                }
+            }
+
+            .bar-load.pending {
+                animation: pending 1s ease;
+                width: 15%;
+            }
+
+            .bar-load.processing {
+                animation: processing 1s ease;
+                width: 40%;
+            }
+
+            .bar-load.delivering {
+                animation: delivering 1s ease;
+                width: 69%;
+            }
+
+            .bar-load.completed {
+                animation: completed 1s ease;
+                width: 100%;
+            }
+        }
+
+
+        .track-detail {
+            text-decoration: none;
+            font-size: 1.4vw;
+            color: rgb(255, 255, 246);
+        }
+
+    }
+}
+
+.order-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.ordered-meals,
+.order-infos {
+    margin: 0 30px 50px;
+}
+
+.ordered-meals {
+    flex: 1 1 45%;
+}
+
+.order-infos {
+    flex: 1 1 40%;
+}
+
+
+.title {
+    font-size: 1.8vw;
+    background-color: rgb(75, 79, 49);
+    border-radius: 10px;
+    > h5 {
+        padding: 10px 20px;
+        margin: 20px 0;
+    }
+}
+
+.meal-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    font-size: 1.2vw;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(255, 255, 246);
+    gap: 30px;
+}
+
+.meal {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.meal-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.meal-name {
+    margin-bottom: 10px;
+}
+
+.total {
+    margin-top: -20px;
+    border-bottom: 1px solid rgb(255, 255, 246);
+
+    .sub-total {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.payable {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-infos {
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 10px 0;
+    }
+}
+
+.label {
+    font-weight: 700;
+}
+
+@keyframes pending {
+    from {
+        width: 0;
+    }    
+    to {
+        width: 15%;
+    }
+}
+
+@keyframes processing {
+    from {
+        width: 0;
+    }    
+    to {
+        width: 40%;
+    }
+}
+
+@keyframes delivering {
+    from {
+        width: 0;
+    }    
+    to {
+        width: 69%;
+    }
+}
+@keyframes completed {
+    from {
+        width: 0;
+    }    
+    to {
+        width: 100%;
+    }
+}

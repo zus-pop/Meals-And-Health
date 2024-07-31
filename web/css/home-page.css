@@ -1,0 +1,194 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    background-image: linear-gradient(#656A5F, #4A5046);
+}
+
+.main-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/home-page-large-main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 699px;
+    box-shadow: inset 3px -20px 82px 27px #00000099;
+}
+
+.banner-content {
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 4px 6px 10px black;
+
+    .main-quote {
+        font-size: 8.9vw;
+        margin: 20px 0;
+    }
+
+    .description {
+        font-size: 2vw;
+        font-weight: lighter;
+    }
+}
+
+.underline {
+    font-size: 3vw;
+    position: relative;
+    left: 34px;
+    width: max-content;
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        bottom: 0px;
+        left: 0;
+    }
+}
+
+.meals-section {
+    color: white;
+
+    .meals-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+}
+
+.meal-card {
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: all 0.8s ease;
+
+    .meal-image {
+        box-shadow: 2px 6px 13px #000000d1;
+        width: 404px;
+        height: 280px;
+        border-radius: 8px;
+    }
+
+    .description {
+        .name {
+            font-size: 2vw;
+        }
+
+        .des {
+            font-size: 1.5vw;
+            font-weight: 300;
+            max-width: 400px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .price {
+            font-size: 1.5vw;
+            font-weight: 500;
+        }
+    }
+}
+
+.meal-card.observed {
+    opacity: 1;
+}
+
+.weekly-plans-section {
+    color: white;
+
+
+    .weekly-plans-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+
+        .weekly-plan-big {
+            opacity: 0;
+            transition: all 0.8s ease;
+
+            .big-img {
+                width: 600px;
+                height: 450px;
+                border-radius: 8px;
+            }
+
+            .name {
+                font-size: 1.8vw;
+            }
+
+            .des {
+                font-size: 1.5vw;
+                font-weight: 400;
+                width: 620px;
+                display: -webkit-box;
+                line-height: 40px;
+                line-clamp: 4;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+
+        .weekly-plan-big.observed {
+            opacity: 1;
+        }
+
+        .weekly-plans-list {
+            display: flex;
+            flex-direction: column;
+
+            .weekly-plan {
+                opacity: 0;
+                transition: all 0.8s ease;
+
+                .small-img {
+                    width: 400px;
+                    height: 220px;
+                    border-radius: 8px;
+                }
+
+                .name {
+                    font-size: 1.5vw;
+                }
+
+                .des {
+                    font-size: 1.3vw;
+                    font-weight: 400;
+                    width: 400px;
+                    line-height: 25px;
+                    display: -webkit-box;
+                    line-clamp: 2;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            }
+
+            .weekly-plan.observed {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.empty-msg {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}

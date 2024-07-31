@@ -1,0 +1,101 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('../images/order-detail.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    backdrop-filter: blur(18px);
+}
+
+.link-to-detail {
+    text-decoration: none;
+    color: white;
+    background-color: white;
+    font-size: 1.5vw;
+}
+
+.orders-container {
+    color: white;
+    margin: 100px 200px;
+}
+
+.order {
+    border: 1px solid rgba(247, 255, 194, 0.289);
+    background-color: rgba(183, 186, 106, 0.12);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    transition: all 0.2s;
+    margin: 30px;
+}
+
+.order-id,
+.order-status {
+    display: flex;
+    gap: 10px;
+    
+    .label {
+        font-weight: 750;
+    }
+}
+
+.empty-msg {
+    text-align: center;
+    border: 1px solid rgba(247, 255, 194, 0.289);
+    background-color: rgba(183, 186, 106, 0.12);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    transition: all 0.2s;
+    margin: 100px 30px;
+    position: relative;
+    top: 180px;
+}
+
+.order:hover {
+    background-color: rgba(251, 255, 147, 0.12);
+}
+
+.order-meta {
+    border-bottom: 1px solid rgba(251, 255, 147, 0.457);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.order-row {
+    border-bottom: 1px solid rgba(251, 255, 147, 0.457);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.meal-content {
+    display: flex;
+    gap: 20px;
+
+    .meal-image {
+        border: 1px solid rgba(251, 255, 147, 0.457);
+        width: 100px;
+        height: 80px;
+        border-radius: 10px;
+    }
+}
+
+.order-total-cost {
+    text-align: end;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 1.5vw;
+}

@@ -1,0 +1,244 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('../images/order-detail.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    backdrop-filter: blur(18px);
+}
+
+.manage-order-container {
+    margin: 100px 50px;
+    color: white;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(232, 250, 255, 0.756);
+    border-radius: 10px;
+    margin: 50px 0;
+    background-color: rgba(75, 120, 133, 0.352);
+    backdrop-filter: blur(20px);
+}
+
+.row {
+    gap: 20px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.2s;
+    border-bottom: 1px solid rgba(232, 250, 255, 0.756);
+
+    &:last-child {
+        border: none;
+    }
+
+    &:hover {
+        background-color: rgba(61, 109, 122, 0.352);
+    }
+}
+
+.col {
+    text-align: center;
+    flex: 1;
+    word-break: break-all;
+    margin: 10px 0;
+}
+
+.email-col {
+    flex: 1.8;
+}
+
+.address-col {
+    flex: 2.8;
+}
+
+.title-row>.col {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.content-row>.col {
+    font-size: 14px;
+}
+
+.action-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    >.detail-btn {
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        padding: 10px 0;
+        margin: 0 2px;
+        font-weight: 400;
+        border-radius: 20px;
+        background-color: rgba(48, 124, 116, 0.53);
+        border: 1px solid rgba(232, 250, 255, 0.756);
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+            border: 1px solid rgb(24, 65, 77);
+            background-color: rgba(88, 216, 203, 0.53);
+            color: rgb(15, 55, 66);
+        }
+    }
+
+    .status-changer {
+        background-color: rgba(48, 124, 116, 0.53);
+        border: 1px solid rgba(232, 250, 255, 0.756);
+        border-radius: 20px;
+        padding: 10px 0;
+        color: white;
+        text-align: center;
+
+        >option {
+            background-color: rgba(0, 0, 0, 0.838);
+            font-size: 15px;
+        }
+
+    }
+}
+
+.manage-title,
+.empty-msg {
+    text-align: center;
+    font-size: 30px;
+}
+
+.search-by-address {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#city,
+#district,
+#ward {
+    color: white;
+    background-color: rgba(68, 134, 127, 0.53);
+    border: 1px solid rgba(232, 250, 255, 0.756);
+    border-radius: 10px;
+    padding: 10px 0;
+    width: 250px;
+    font-size: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    >option {
+        background-color: rgba(1, 13, 13, 0.715);
+        font-size: 20px;
+    }
+}
+
+fieldset {
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgba(43, 79, 73, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+legend {
+    font-size: 24px;
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.address-btn {
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    border-radius: 15px;
+    width: 300px;
+    padding: 5px 0;
+    background-color: rgba(48, 124, 116, 0.53);
+    border: 1px solid rgba(232, 250, 255, 0.756);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        border: 1px solid rgb(83, 143, 161);
+        background-color: rgba(88, 216, 203, 0.53);
+        color: rgb(16, 45, 53);
+    }
+}
+
+.date-contact-btn {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 15px;
+    width: 300px;
+    padding: 5px 0;
+    background-color: rgba(48, 124, 116, 0.53);
+    border: 1px solid rgba(232, 250, 255, 0.756);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        border: 1px solid rgb(83, 143, 161);
+        background-color: rgba(88, 216, 203, 0.53);
+        color: rgb(16, 45, 53);
+    }
+}
+
+.search-by-date-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    >:last-child {
+        align-self: center;
+    }
+}
+
+.contact-date-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    gap: 20px;
+
+    label {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+
+    input {
+        background-color: rgba(48, 124, 116, 0.53);
+        border: 1px solid rgba(232, 250, 255, 0.756);
+        border-radius: 8px;
+        font-size: 18px;
+        padding: 5px 10px;
+        color-scheme: dark;
+        &::placeholder {
+            color: white;
+        }
+    }
+}
