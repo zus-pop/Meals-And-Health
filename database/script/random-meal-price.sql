@@ -1,0 +1,2 @@
+﻿UPDATE Meal
+SET Price = ABS(CHECKSUM(NEWID()) % 200001) + 50000
